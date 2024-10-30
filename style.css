@@ -1,0 +1,47 @@
+@charset "utf-8";
+.liquid_treemap #chart {
+  width: 960px;
+  height: 500px;
+  background: #ddd;
+}
+
+.liquid_treemap text {
+  pointer-events: none;
+  font-size: x-small;
+}
+
+.liquid_treemap .grandparent text {
+  font-weight: bold;
+}
+
+.liquid_treemap rect {
+  fill: none;
+  stroke: #fff;
+}
+
+.liquid_treemap rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+.liquid_treemap .grandparent rect {
+  fill: #ffba00;
+}
+
+.liquid_treemap .grandparent:hover rect {
+  fill: #dea200;
+}
+
+.liquid_treemap .children rect.parent,
+.liquid_treemap .grandparent rect {
+  cursor: pointer;
+}
+
+.liquid_treemap .children rect.parent {
+  fill: #bbb;
+  fill-opacity: .5;
+}
+
+.liquid_treemap .children:hover rect.child {
+  fill: #bbb;
+}
